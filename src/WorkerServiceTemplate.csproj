@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-PassKeepr.Workers.Scheduler-03003AE2-0E2A-48FC-886F-9B241BC315BA</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'PassKeepr.Workers.Scheduler' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Coravel" Version="4.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Coravel" />
+  </ItemGroup>
+</Project>
